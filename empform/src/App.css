@@ -1,0 +1,138 @@
+/* 
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+/* UserForm.css */
+
+/* Style for the form container */
+
+body {
+  background-image: url(../img/backgorund.webp);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: #f9f9f9; */
+  background-color: rgba(207, 216, 228, 0.4);
+}
+
+/* Style for form labels */
+label {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fffefe;
+}
+
+/* Style for text inputs and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+h1{
+  color: white;
+  text-align: center;
+}
+
+/* Style for textarea specifically */
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Style for submit button */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 110px;
+}
+
+button:hover {
+  background-color: #00b34b;
+  transition: 3s;
+}
+
+/* Style for error messages */
+p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.875em;
+}
+
+p {
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Style for the submitted data section */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.25em;
+  color: #faf6f6;
+}
+
+strong {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
