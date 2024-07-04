@@ -29,7 +29,7 @@ import React, { useState } from 'react';
 import './App.css'
 
 function Form() {
-  const [formData, setData] = useState({
+  const [formInfo, setData] = useState({
     name: '',
     contactNumber: '',
     email: '',
@@ -44,7 +44,7 @@ function Form() {
   const handleForm = (event) => {
     const { name, value } = event.target;
     setData({
-      ...formData,
+      ...formInfo,
       [name]: value
     });
   };
@@ -54,19 +54,19 @@ function Form() {
 
     // Pin code validation (assuming a 6-digit number)
     const pinCodeRegex = /^\d{6}$/;
-    if (!pinCodeRegex.test(formData.pinCode)) {
+    if (!pinCodeRegex.test(formInfo.pinCode)) {
       errors.pinCode = 'Pin code must be 6 digits';
     }
 
     // Contact number validation (starts with 6, 7, 8, 9 and 10 digits)
     const contactNumberRegex = /^[6-9]\d{9}$/;
-    if (!contactNumberRegex.test(formData.contactNumber)) {
-      errors.contactNumber = 'Contact number must start with 6, 7, 8, or 9 and be 10 digits long';
+    if (!contactNumberRegex.test(formInfo.contactNumber)) {
+      errors.contactNumber = 'Contact number must start with 6, 7, 8, or 9 and be 10 digits long .add';
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailReg.test(formInfo.email)) {
       errors.email = 'Invalid email address';
     }
 
@@ -77,7 +77,7 @@ function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validate()) {
-      setSubmittedData(formData);
+      setSubmittedData(formInfo);
     }
   };
 
@@ -93,7 +93,7 @@ function Form() {
             <input
               type="text"
               name="name"
-              value={formData.name}
+              value={formInfo.name}
               onChange={handleForm}
               required
             />
@@ -105,7 +105,7 @@ function Form() {
             <input
               type="text"
               name="contactNumber"
-              value={formData.contactNumber}
+              value={formInfo.contactNumber}
               onChange={handleForm}
               required
             />
@@ -118,7 +118,7 @@ function Form() {
             <input
               type="email"
               name="email"
-              value={formData.email}
+              value={formInfo.email}
               onChange={handleForm}
               required
             />
@@ -130,7 +130,7 @@ function Form() {
             Address
             <textarea
               name="address"
-              value={formData.address}
+              value={formInfo.address}
               onChange={handleForm}
               required
             />
@@ -142,7 +142,7 @@ function Form() {
             <input
               type="text"
               name="pinCode"
-              value={formData.pinCode}
+              value={formInfo.pinCode}
               onChange={handleForm}
               required
             />
@@ -155,7 +155,7 @@ function Form() {
             <input
               type="text"
               name="occupation"
-              value={formData.occupation}
+              value={formInfo.occupation}
               onChange={handleForm}
               required
             />
@@ -167,12 +167,12 @@ function Form() {
       {submittedData && (
         <div>
           <h2>Data</h2>
-          <p><strong>Name</strong> {submittedData.name}</p>
-          <p><strong>Contact Number</strong> {submittedData.contactNumber}</p>
-          <p><strong>Email</strong> {submittedData.email}</p>
-          <p><strong>Address</strong> {submittedData.address}</p>
-          <p><strong>Pin Code</strong> {submittedData.pinCode}</p>
-          <p><strong>Occupation</strong> {submittedData.occupation}</p>
+          <p><strong>Name:</strong> {submittedData.name}</p>
+          <p><strong>Contact Number:</strong> {submittedData.contactNumber}</p>
+          <p><strong>Email:</strong> {submittedData.email}</p>
+          <p><strong>Address:</strong> {submittedData.address}</p>
+          <p><strong>Pin Code:</strong> {submittedData.pinCode}</p>
+          <p><strong>Occupation:</strong> {submittedData.occupation}</p>
         </div>
       )}
     </div>

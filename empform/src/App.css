@@ -46,6 +46,9 @@
 
 body {
   background-image: url(../img/backgorund.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
@@ -107,7 +110,7 @@ button {
 
 button:hover {
   background-color: #00b34b;
-  transition: 3s;
+  transition: 1s;
 }
 
 /* Style for error messages */
@@ -134,5 +137,5 @@ h2 {
 strong {
   text-align: center;
   font-weight: bold;
-  color: #007bff;
+  color: #73afef;
 }
