@@ -48,7 +48,10 @@ body {
   background-image: url(../img/backgorund.webp);
   background-repeat: no-repeat;
   background-size: 100%;
+<<<<<<< HEAD
   background-attachment: fixed;
+=======
+>>>>>>> 3d3ca73a93bd20b973255b4f288fedd54a6ba177
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
